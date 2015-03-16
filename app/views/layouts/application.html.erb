@@ -1,14 +1,25 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>YellowPages</title>
+  <title>Yellow Pages</title>
+  <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css" rel="stylesheet">
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
 
-<%= yield %>
+  <div class="container">
+    <nav>
+      <ul>
+        <li><%= link_to "Home", categories_path %></li>
+        <li><%= link_to "Add Category", new_category_path %></li>
+      </ul>
+    </nav>
+    <%= flash[:alert] %>
+    <%= flash[:notice] %>
+    <%= yield %>
+  </div>
 
 </body>
 </html>

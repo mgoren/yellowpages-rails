@@ -1,0 +1,37 @@
+body {
+  background-color: #887CAF;
+}
+
+.container {
+  width: 65%;
+  background-color: #FFE3AA;
+  margin: 2em auto;
+  padding: 15px
+}
+
+.strikethrough {
+  text-decoration: line-through;
+}
+
+li.inline form {
+  display: inline;
+}
+
+.glyphicon-trash {
+  font-size: 20px;
+}
+
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+a {
+  color: black;
+}
+
+nav li {
+  display: inline;
+  padding-right: 1em;
+  text-transform: uppercase;
+}

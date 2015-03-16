@@ -1,0 +1,25 @@
+<%= render "layouts/errors", object: @company %>
+
+<%= form_for [@category, @company], :html => { :class => "form-horizontal" } do |f| %>
+  <div class="form-group">
+    <%= f.label :name, {class: "col-md-2"} %>
+    <%= f.text_field :name, {class: "col-md-8"}%>
+  </div>
+  <div class="form-group">
+    <%= f.label :address, {class: "col-md-2"} %>
+    <%= f.text_field :address, {class: "col-md-8"} %>
+  </div>
+  <div class="form-group">
+    <%= f.label :website, {class: "col-md-2"} %>
+    <%= f.text_field :website, {class: "col-md-8"} %>
+  </div>
+  <div class="form-group">
+    <%= f.label :hours, {class: "col-md-2"} %>
+    <%= f.text_field :hours, {class: "col-md-8"} %>
+  </div>
+  <div class="form-group">
+    <%= f.label :phone, {class: "col-md-2"} %>
+    <%= f.text_field :phone, {class: "col-md-8"} %>
+  </div>
+  <%= f.submit class: "col-md-offset-2 company-button" %>
+<% end %>

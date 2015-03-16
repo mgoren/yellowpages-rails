@@ -1,0 +1,12 @@
+<nav class="sub-nav">
+  <ul>
+    <li class="navbar-name"><%= @company.name %></li>
+    <li><%= link_to "Back", category_path(@category) %></li>
+    <li><%= link_to "Edit", edit_category_company_path(@category, @company) %></li>
+    <li><%= link_to "Delete", category_company_path(@category, @company), data: {confirm: "are you sure?", method: "delete"} %></li>
+  </ul>
+</nav>
+<p><%= @company.address %></p>
+<p><%= @company.phone %></p>
+<p><%= @company.website %></p>
+<p><%= @company.hours %></p>

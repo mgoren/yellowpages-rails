@@ -35,3 +35,25 @@ nav li {
   padding-right: 1em;
   text-transform: uppercase;
 }
+
+.navbar-name {
+  font-weight: 800;
+  font-size: 1.5em;
+}
+
+.sub-nav ul {
+  background-color: white;
+  padding: 5px;
+}
+
+.col-md-2 {
+  text-align: right;
+}
+
+.form-horizontal {
+  margin: 20px;
+}
+
+.company-button {
+
+}

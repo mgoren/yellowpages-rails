@@ -1,4 +1,19 @@
-<h1>
-  <%= link_to @category.name, edit_category_path %>
-  <%= link_to "<i class='glyphicon glyphicon-trash'></i>".html_safe, category_path(@category), data: {confirm: "are you sure?", method: "delete"} %>
-</h1>
+<nav class="sub-nav">
+  <ul>
+    <li class="navbar-name"><%= @category.name %></li>
+    <li><%= link_to "Add Company", new_category_company_path(@category)%></li>
+    <li><%= link_to "Edit", edit_category_path %></li>
+    <li><%= link_to "Delete", category_path(@category), data: {confirm: "are you sure?", method: "delete"} %></li>
+  </ul>
+</nav>
+
+<% if @category.companies.any? %>
+  <h4>Companies:</h4>
+    <ul>
+      <% @category.companies.each do |company| %>
+        <li><%= link_to company.name, category_company_path(@category, company) %></li>
+      <% end %>
+    </ul>
+<% else %>
+  <p>No companies.</p>
+<% end %>
